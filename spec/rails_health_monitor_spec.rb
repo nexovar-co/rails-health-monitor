@@ -9,5 +9,7 @@ RSpec.describe RailsHealthMonitor do
     result = RailsHealthMonitor.check
 
     expect(result[:ruby_version]).to eq(RUBY_VERSION)
+    expect(result[:hostname]).to eq(Socket.gethostname)
+    expect(result[:timestamp]).to be_a(Time)
   end
 end
