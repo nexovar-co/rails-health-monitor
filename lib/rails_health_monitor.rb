@@ -10,6 +10,7 @@ module RailsHealthMonitor
     {
       ruby_version: RUBY_VERSION,
       rails_version: defined?(Rails) ? Rails.version : nil,
+      environment: defined?(Rails) ? Rails.env : nil,
       hostname: Socket.gethostname,
       timestamp: Time.now.utc
     }

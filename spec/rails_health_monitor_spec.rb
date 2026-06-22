@@ -12,5 +12,6 @@ RSpec.describe RailsHealthMonitor do
     expect(result[:hostname]).to eq(Socket.gethostname)
     expect(result[:timestamp]).to be_a(Time)
     expect(result[:rails_version]).to eq(defined?(Rails) ? Rails.version : nil)
+    expect(result[:environment]).to eq(defined?(Rails) ? Rails.env : nil)
   end
 end
