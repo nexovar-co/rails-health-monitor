@@ -56,9 +56,11 @@ Example response:
 
 ```ruby
 {
-  gem_version: "0.1.0",
   ruby_version: "3.4.5",
-  hostname: "web-01"
+  rails_version: "8.0.2",
+  environment: "production",
+  hostname: "web-01",
+  timestamp: 2026-06-22 14:30:00 UTC
 }
 ```
 
