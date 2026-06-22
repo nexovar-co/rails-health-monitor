@@ -1,39 +1,116 @@
 # RailsHealthMonitor
 
-TODO: Delete this and the text below, and describe your gem
+RailsHealthMonitor is a lightweight Ruby gem for collecting basic application and system health information.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rails_health_monitor`. To experiment with that code, run `bin/console` for an interactive prompt.
+It helps developers verify runtime information such as Ruby version, gem version, hostname, and other health metrics that can be used for monitoring and diagnostics.
+
+This project is developed by Nexovar.
+
+## Features
+
+Current features:
+
+* Gem version reporting
+* Ruby version reporting
+* Hostname detection
+* Lightweight health check API
+
+Planned features:
+
+* Rails version detection
+* Database connectivity checks
+* Redis connectivity checks
+* Sidekiq health checks
+* Rails Engine dashboard
+* Health endpoint integration
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Add this line to your application's Gemfile:
 
-Install the gem and add to the application's Gemfile by executing:
-
-```bash
-bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+```ruby
+gem "rails_health_monitor"
 ```
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+And then execute:
 
 ```bash
-gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+bundle install
+```
+
+Or install it directly:
+
+```bash
+gem install rails_health_monitor
 ```
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require "rails_health_monitor"
+
+RailsHealthMonitor.check
+```
+
+Example response:
+
+```ruby
+{
+  gem_version: "0.1.0",
+  ruby_version: "3.4.5",
+  hostname: "web-01"
+}
+```
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Clone the repository and install dependencies:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```bash
+bin/setup
+```
+
+Run the test suite:
+
+```bash
+bundle exec rspec
+```
+
+Open an interactive console:
+
+```bash
+bin/console
+```
+
+## Roadmap
+
+Version 0.1
+
+* Basic health check API
+* Ruby runtime information
+
+Version 0.2
+
+* Rails environment information
+* Database health checks
+
+Version 0.3
+
+* Redis health checks
+* Sidekiq monitoring
+
+Version 1.0
+
+* Rails Engine integration
+* Monitoring dashboard
+* Production-ready health endpoint
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rails_health_monitor. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/rails_health_monitor/blob/master/CODE_OF_CONDUCT.md).
+Bug reports, feature requests, and pull requests are welcome.
 
-## Code of Conduct
+Please ensure all tests pass before submitting changes.
 
-Everyone interacting in the RailsHealthMonitor project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rails_health_monitor/blob/master/CODE_OF_CONDUCT.md).
+## License
+
+This project is available as open source under the terms of the MIT License.
