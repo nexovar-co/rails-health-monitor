@@ -1,0 +1,33 @@
+# Bundler
+/.bundle
+
+# Temporary files
+/tmp
+/temp
+
+# Logs
+*.log
+
+# Coverage reports
+/coverage
+
+# RSpec
+.rspec_status
+
+# Built gems
+*.gem
+/pkg
+
+# Environment variables
+.env
+.env.*
+
+# IDEs
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Optional: if you install gems locally into project
+/vendor/bundle
