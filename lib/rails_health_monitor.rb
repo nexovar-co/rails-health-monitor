@@ -9,8 +9,9 @@ module RailsHealthMonitor
   def self.check
     {
       ruby_version: RUBY_VERSION,
+      rails_version: defined?(Rails) ? Rails.version : nil,
       hostname: Socket.gethostname,
-      timestamp: Time.now
+      timestamp: Time.now.utc
     }
   end
 end
