@@ -60,7 +60,10 @@ Example response:
   rails_version: "8.0.2",
   environment: "production",
   hostname: "web-01",
-  timestamp: 2026-06-22 14:30:00 UTC
+  timestamp: 2026-06-22 14:30:00 UTC,
+  database: {
+    status: "ok"
+  }
 }
 ```
 
